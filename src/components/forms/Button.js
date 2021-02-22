@@ -1,7 +1,18 @@
 import React from 'react';
+import styles from './button.module.css';
 
-const Button = () => {
-  return <button>Entrar</button>;
+const Button = ({ children }) => {
+  return (
+    <div>
+      <button className={styles.button}>{children}</button>
+    </div>
+  );
+};
+
+const styled = {
+  button: {
+    background: '#fb1',
+  },
 };
 
 export default Button;
