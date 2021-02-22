@@ -1,19 +1,51 @@
-input {
-  display: block;
-  margin-bottom: 1rem;
-  font-size: 1.125em;
-  padding: 8px 5px;
-  border: 1px solid #000;
-  border-radius: 3%;
+* {
+  box-sizing: border-box;
 }
 
+body {
+  margin-top: 3rem;
+  color: #252525;
+  --type-first: Helvetica, Arial, sans-serif;
+  --type-second: 'Spectral', Georgia;
+  font-family: var(--type-first);
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+}
+
+ul,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+input,
 button {
-  font-size: 1.125em;
-  background: #c83306;
-  color: #f6f6f6;
+  display: block;
+}
 
-  border: none;
-  border-radius: 5%;
+.container {
+  max-width: 60rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}
 
-  padding: 8px 5px;
+.content {
+  display: flexbox;
 }

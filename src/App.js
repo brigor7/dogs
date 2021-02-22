@@ -1,13 +1,22 @@
 import React from 'react';
+import { BrowserRouter, Router, Route, Routes } from 'react-router-dom';
 import './App.css';
-import PhotoGet from './api/PhotoGet';
-import PhotoPost from './api/PhotoPost';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import Home from './components/Home';
+import Login from './components/login/Login';
 function App() {
   return (
-    <div>
-      <PhotoPost />
-      <PhotoGet />
-    </div>
+    <>
+      <BrowserRouter>
+        <Header />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/login/*" element={<Login />} />
+        </Routes>
+        <Footer />
+      </BrowserRouter>
+    </>
   );
 }
 
