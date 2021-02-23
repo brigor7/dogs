@@ -17,12 +17,26 @@
   [✓]PhotoPost 
   [✓]PhotoGet
 
-[]Estrutura inicial
-[]Header
-[]Login Routes
-[]Form Component
-[]useForm
+[✓]Estrutura inicial
+[✓]Header
+[✓]Login Routes
+  [✓] Create template of Components: LoginForm LoginCreate, LoginPassword, LoginPasswordReset
+  [✓] Vinculated route '/' in <App /> to Login
+  [✓] access routes of components login in the internal component Login e não no <App />
+[✓]Form Component
+  [✓] Create input Component and module.css
+  [✓] Create button component and module.css
+  [✓] Create Component LoginForm with use the components Input and Button
+[✓]useForm
+  [✓] Transfer value, useValue and onChange for useForm
+  [✓] Create validate with regex for verify email and null fields
+  [✓] Use validate in onblur, onChange
+  [✓] Error implementation tag signaling an error on the screen through the function performed validate
 []Api Fectch
+  [] Create function TOKEN_POST for to use fetch with 2 arguments URL, options (body)
+  [] Save token from fetch in localstorage
+  [] Create function USER_GET for to rescue data user from API
+  [] Use effect for to rescue token from localStorage, else search token from API
 []userContext
 []validade Token
 []Login form
