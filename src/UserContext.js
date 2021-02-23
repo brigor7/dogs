@@ -1,4 +1,4 @@
-import React, { createContext, useState, useEffect } from 'react';
+import React, { createContext, useState, useEffect, useCallback } from 'react';
 import { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from './api';
 import { useNavigate } from 'react-router-dom';
 
@@ -9,6 +9,18 @@ export const UserStorage = ({ children }) => {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+
+  const userLogout = useCallback(
+    async function () {
+      setData(null);
+      setError(null);
+      setLoading(false);
+      setLogin(false);
+      localStorage.removeItem('token');
+      navigate('/login');
+    },
+    [navigate]
+  );
 
   useEffect(() => {
     async function autoLogin() {
@@ -31,7 +43,7 @@ export const UserStorage = ({ children }) => {
     }
 
     autoLogin();
-  }, []);
+  }, [userLogout]);
 
   async function userLogin(username, password) {
     try {
@@ -53,15 +65,6 @@ export const UserStorage = ({ children }) => {
     } finally {
       setLoading(false);
     }
-  }
-
-  function userLogout() {
-    setData(null);
-    setError(null);
-    setLoading(false);
-    setLogin(false);
-    localStorage.removeItem('token');
-    navigate('/login');
   }
 
   async function getUser(token) {
