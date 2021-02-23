@@ -10,15 +10,21 @@ export const UserStorage = ({ children }) => {
 
   useEffect(() => {
     async function autoLogin() {
-      const token = localStorage.getItem('token');
-      if (token) {
-        const { url, options } = TOKEN_VALIDATE_POST(token);
-        const response = await fetch(url, options);
-        const json = await response.json();
-
-        if (json.data.status) {
-          getUser(token);
+      try {
+        setLoading(true);
+        const token = localStorage.getItem('token');
+        if (token) {
+          const { url, options } = TOKEN_VALIDATE_POST(token);
+          const response = await fetch(url, options);
+          if (response.ok) {
+            await getUser(token);
+          } else {
+            throw new Error('Token Inválido');
+          }
         }
+      } catch (error) {
+      } finally {
+        setLoading(false);
       }
     }
 
@@ -43,7 +49,7 @@ export const UserStorage = ({ children }) => {
   }
 
   return (
-    <UserContext.Provider value={{ userLogin, data }}>
+    <UserContext.Provider value={{ userLogin, userLogout, data }}>
       {children}
     </UserContext.Provider>
   );
