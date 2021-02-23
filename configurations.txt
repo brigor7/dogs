@@ -47,6 +47,8 @@
 []validade Token
   []useEffect em UserContext para login Automatico, via verificação de token em localStorage
   []Criação de TOKEN_VALIDATE_POST em UserContext para verificar se token esta ativo
+  []Tratamento de erro
+  [] Create method userLogout in UserContext and used in <Header/>
 []Login form
 []Login Background
 []Login Criar

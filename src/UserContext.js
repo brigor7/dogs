@@ -39,6 +39,14 @@ export const UserStorage = ({ children }) => {
     getUser(json.token);
   }
 
+  function userLogout() {
+    setData(null);
+    setError(null);
+    setLoading(false);
+    setLogin(false);
+    localStorage.removeItem('token');
+  }
+
   async function getUser(token) {
     const { url, options } = USER_GET(token);
     const response = await fetch(url, options);
