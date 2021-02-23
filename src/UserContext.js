@@ -1,5 +1,5 @@
 import React, { createContext, useState, useEffect } from 'react';
-import { TOKEN_POST, USER_GET } from './api';
+import { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from './api';
 
 export const UserContext = createContext();
 export const UserStorage = ({ children }) => {
@@ -12,7 +12,13 @@ export const UserStorage = ({ children }) => {
     async function autoLogin() {
       const token = localStorage.getItem('token');
       if (token) {
-        getUser(token);
+        const { url, options } = TOKEN_VALIDATE_POST(token);
+        const response = await fetch(url, options);
+        const json = await response.json();
+
+        if (json.data.status) {
+          getUser(token);
+        }
       }
     }
 
