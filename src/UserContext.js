@@ -1,5 +1,6 @@
 import React, { createContext, useState, useEffect } from 'react';
 import { TOKEN_POST, USER_GET, TOKEN_VALIDATE_POST } from './api';
+import { useNavigate } from 'react-router-dom';
 
 export const UserContext = createContext();
 export const UserStorage = ({ children }) => {
@@ -7,6 +8,7 @@ export const UserStorage = ({ children }) => {
   const [login, setLogin] = useState(null);
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     async function autoLogin() {
@@ -17,11 +19,8 @@ export const UserStorage = ({ children }) => {
         if (token) {
           const { url, options } = TOKEN_VALIDATE_POST(token);
           const response = await fetch(url, options);
-          if (response.ok) {
-            await getUser(token);
-          } else {
-            throw new Error('Token Inválido');
-          }
+          if (!response.ok) throw new Error('Token Inválido');
+          await getUser(token);
         }
       } catch (err) {
         setError(err.message);
@@ -47,6 +46,7 @@ export const UserStorage = ({ children }) => {
       const json = await response.json();
       localStorage.setItem('token', json.token);
       await getUser(json.token);
+      navigate('/conta');
     } catch (err) {
       setError(err.message);
       setLogin(false);
@@ -61,6 +61,7 @@ export const UserStorage = ({ children }) => {
     setLoading(false);
     setLogin(false);
     localStorage.removeItem('token');
+    navigate('/login');
   }
 
   async function getUser(token) {
