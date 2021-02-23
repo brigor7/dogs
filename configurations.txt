@@ -32,13 +32,21 @@
   [✓] Create validate with regex for verify email and null fields
   [✓] Use validate in onblur, onChange
   [✓] Error implementation tag signaling an error on the screen through the function performed validate
-[]Api Fectch
-  [] Create function TOKEN_POST for to use fetch with 2 arguments URL, options (body)
-  [] Save token from fetch in localstorage
-  [] Create function USER_GET for to rescue data user from API
-  [] Use effect for to rescue token from localStorage, else search token from API
-[]userContext
+[✓]Api Fectch
+  [✓] Create function TOKEN_POST for to use fetch with 2 arguments URL, options (body)
+  [✓] Save token from fetch in localstorage
+  [✓] Create function USER_GET for to rescue data user from API
+  [✓] Use effect for to rescue token from localStorage, else search token from API
+[✓]userContext
+  [✓] Created UserContext/Provider and included provider in <App />
+  [✓] Transferido metodos com uso de fetch (getUser e userLogin) de LoginForm para UserContext
+  [✓] Retirado useEffect de LoginForm
+  [✓] Export userLogin e data pelo Context.Provider
+  [✓] Import userLogin e execução de LoginForm(username, password)
+  [✓] Import data e configuração de Header para apresentar conteudo (data) no cabecalho se este existente
 []validade Token
+  []useEffect em UserContext para login Automatico, via verificação de token em localStorage
+  []Criação de TOKEN_VALIDATE_POST em UserContext para verificar se token esta ativo
 []Login form
 []Login Background
 []Login Criar
