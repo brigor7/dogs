@@ -11,6 +11,7 @@ export const UserStorage = ({ children }) => {
   useEffect(() => {
     async function autoLogin() {
       try {
+        setError(null);
         setLoading(true);
         const token = localStorage.getItem('token');
         if (token) {
@@ -22,7 +23,9 @@ export const UserStorage = ({ children }) => {
             throw new Error('Token Inválido');
           }
         }
-      } catch (error) {
+      } catch (err) {
+        setError(err.message);
+        userLogout();
       } finally {
         setLoading(false);
       }
@@ -32,11 +35,24 @@ export const UserStorage = ({ children }) => {
   }, []);
 
   async function userLogin(username, password) {
-    const { url, options } = TOKEN_POST({ username, password });
-    const response = await fetch(url, options);
-    const json = await response.json();
-    localStorage.setItem('token', json.token);
-    getUser(json.token);
+    try {
+      setError(null);
+      setLoading(true);
+      const { url, options } = TOKEN_POST({ username, password });
+      const response = await fetch(url, options);
+      console.log(response);
+      if (!response.ok) {
+        throw new Error(`Erro usuário inválido. ${response.statusText}`);
+      }
+      const json = await response.json();
+      localStorage.setItem('token', json.token);
+      await getUser(json.token);
+    } catch (err) {
+      setError(err.message);
+      setLogin(false);
+    } finally {
+      setLoading(false);
+    }
   }
 
   function userLogout() {
@@ -57,7 +73,9 @@ export const UserStorage = ({ children }) => {
   }
 
   return (
-    <UserContext.Provider value={{ userLogin, userLogout, data }}>
+    <UserContext.Provider
+      value={{ userLogin, userLogout, data, error, loading, login }}
+    >
       {children}
     </UserContext.Provider>
   );

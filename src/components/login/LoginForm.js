@@ -10,7 +10,7 @@ const LoginForm = () => {
   const username = useForm();
   const password = useForm();
 
-  const { userLogin } = useContext(UserContext);
+  const { userLogin, error } = useContext(UserContext);
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -26,6 +26,7 @@ const LoginForm = () => {
         <Input label="Usuário" type="text" name={'usuario'} {...username} />
         <Input label="Senha" type="password" name={'password'} {...password} />
         <Button>Entrar</Button>
+        {error && <p>{error}</p>}
 
         <Link to="/login/criar">Cadastro</Link>
         <Link to="/login/perdeu">Esqueci a senha</Link>

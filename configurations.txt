@@ -49,6 +49,8 @@
   []Criação de TOKEN_VALIDATE_POST em UserContext para verificar se token esta ativo
   []Tratamento de erro
   [] Create method userLogout in UserContext and used in <Header/>
+  [] Uso de logout se token gravado estiver errado
+  [] Tratamento de erro na página de loginForm se usuario e senha estiverem errados
 []Login form
 []Login Background
 []Login Criar
