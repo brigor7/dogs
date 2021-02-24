@@ -20,7 +20,7 @@ const LoginForm = () => {
   }
 
   return (
-    <section className="container">
+    <section className="animeLeft">
       <h1>Login Form</h1>
       <form onSubmit={handleSubmit}>
         <Input label="Usuário" type="text" name={'usuario'} {...username} />
