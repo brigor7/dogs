@@ -53,7 +53,7 @@ export const UserStorage = ({ children }) => {
       const response = await fetch(url, options);
       console.log(response);
       if (!response.ok) {
-        throw new Error(`Erro usuário inválido. ${response.statusText}`);
+        throw new Error(`Erro: Usuário inválido. ${response.statusText}`);
       }
       const json = await response.json();
       localStorage.setItem('token', json.token);

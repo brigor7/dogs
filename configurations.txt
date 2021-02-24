@@ -74,7 +74,7 @@
   [✓]Create form importando components <Input> e <Button> 
   [✓]Create validate with the strong password to validate password with at least 1 uppercase, 1 lowercase, 1 special characters and a maximum length of 8
   [✓] Inclusão de novo usuario utilizando fetch, criação de nova constante USER_POST(body){url,options}
-  [] Realizando login após cadastro do novo usuario.
+  [✓] Realizando login após cadastro do novo usuario.
   
 []useFetch
 []Protected route

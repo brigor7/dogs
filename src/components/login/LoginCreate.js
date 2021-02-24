@@ -11,18 +11,19 @@ const LoginCreate = () => {
   const username = useForm();
   const email = useForm('email');
   const password = useForm('password');
-  const { error, loading } = useContext(UserContext);
+  const { error, loading, userLogin } = useContext(UserContext);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const { url, options } = USER_POST({
-      username: username.value,
-      email: email.value,
-      password: password.value,
-    });
-    const response = await fetch(url, options);
-
-    console.log(response);
+    if (username.validate() && password.validate()) {
+      const { url, options } = USER_POST({
+        username: username.value,
+        email: email.value,
+        password: password.value,
+      });
+      const response = await fetch(url, options);
+      if (response.ok) userLogin(username.value, password.value);
+    }
   };
 
   return (
