@@ -61,7 +61,13 @@
   [✓] Criação de link Perdeu a senha apontando para rota login/Perdeu
   [✓] Criar LoginForm.module.css, import em LoginForm e estilização de title e subtitulo cadastro
 
-[]Login Background
+[✓]Login Background
+  [✓] Criar Login.module.css
+    [✓] .login: Dividir a tela em 2 colunas com grid onde form ocupara uma coluna e background ocupara outra 
+    [✓] .login:before: inclusão de imagem em Background
+    [✓] .forms: inclusão de margens
+    [✓] @media: tela > 640px transformar para 1 coluna e retirar imagem
+
 []Login Criar
 []useFetch
 []Protected route
