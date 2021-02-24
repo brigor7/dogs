@@ -45,15 +45,22 @@
   [✓] Import userLogin e execução de LoginForm(username, password)
   [✓] Import data e configuração de Header para apresentar conteudo (data) no cabecalho se este existente
 []validade Token
-  []useEffect em UserContext para login Automatico, via verificação de token em localStorage
-  []Criação de TOKEN_VALIDATE_POST em UserContext para verificar se token esta ativo
-  []Tratamento de erro
-  [] Create method userLogout in UserContext and used in <Header/>
-  [] Uso de logout se token gravado estiver errado
-  [] Tratamento de erro na página de loginForm se usuario e senha estiverem errados
-  [] Desabilitar botão ao realizar login 
-  [] Utilizando userNavigate para navegar para outra página após login/logout
-[]Login form
+  [✓]useEffect em UserContext para login Automatico, via verificação de token em localStorage
+  [✓]Criação de TOKEN_VALIDATE_POST em UserContext para verificar se token esta ativo
+  [✓]Tratamento de erro
+  [✓] Create method userLogout in UserContext and used in <Header/>
+  [✓] Uso de logout se token gravado estiver errado
+  [✓] Tratamento de erro na página de loginForm se usuario e senha estiverem errados
+  [✓] Desabilitar botão ao realizar login 
+  [✓] Utilizando userNavigate para navegar para outra página após login/logout
+[✓]Login form
+  [✓] Criar animação de entrada da tela de login em css geral
+  [✓] Ajustar font de H1 criando className="title" e fazendo import de font-family Spectral
+  [✓] criar className title:after com efeito de quadrado ao fundo da fonte 
+  [✓] Criação de pasta helper e  component de mensagem de Erro
+  [✓] Criação de link Perdeu a senha apontando para rota login/Perdeu
+  [✓] Criar LoginForm.module.css, import em LoginForm e estilização de title e subtitulo cadastro
+
 []Login Background
 []Login Criar
 []useFetch
