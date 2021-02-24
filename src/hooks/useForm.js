@@ -10,6 +10,11 @@ const useForm = (type) => {
       regex: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
       message: 'Preencha um e-mail válido',
     },
+    password: {
+      regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+      message:
+        'A senha precisa ter: Mínimo de 8 caracteres e composta por letra e número.',
+    },
   };
 
   const validate = (value) => {
@@ -17,6 +22,7 @@ const useForm = (type) => {
       return true;
     }
 
+    console.log(types[type]);
     if (value.length === 0) {
       setError('Preencha um valor.');
       return false;
