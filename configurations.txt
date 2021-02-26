@@ -87,6 +87,23 @@
   [✓] Criar rota protegida, so se estiver logado ve
   [✓] Setando login como false em UserContext. Acesso a rota protegida so acontece logado 
 []User Header
+  [✓] Criação de pasta e component Feed
+  [✓] Criação de rotas em User 
+  [✓] Criar components vinculando a rota em User
+    [✓]UserHeader com title
+    [✓] Criação de rotas em User 
+    [✓] Criação de novas rotas em UserHeaderNav com title e <Navlink> e uso SVG nos links
+      [✓]Feed
+      [✓]UserPhotoPost
+      [✓]UserStats
+    [✓]Estilização de botoes
+      [✓]Hover, Focus
+      [✓]Active
+      [✓]Estilização da cor do SVG
+    [✓] Estilização para os botoes ficarem ao lado do outro com gap de 1rem
+    [✓] Estilização do UserHeader.header para alinhar titulo e botoes em cada extremo da página
+    [✓] Uso de effect e useLocation para mudar o nome do titulo ao clicar no botão
+
 []Mobile menu
 []Foto post
 []Feed
@@ -100,7 +117,10 @@
 []scroll infinito
 []Foto página
 [] Perfil usuario
-[]Erro 404
+[✓]Erro 404
+  [✓] Criação de componentes
+  [✓] Criação de rota em App
+  [✓] Criação de rota em rotas internas. Ex: Login, User
 []PropTypes
 []Perdeu senha
 []Head
