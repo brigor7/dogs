@@ -11,20 +11,22 @@ import ProtectedRoute from './Helpers/ProtectedRoute';
 import NotFound from './NotFound';
 function App() {
   return (
-    <>
+    <div className="App">
       <BrowserRouter>
         <UserStorage>
           <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/login/*" element={<Login />} />
-            <ProtectedRoute path="/conta/*" element={<Users />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+          <main className="AppBody">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/login/*" element={<Login />} />
+              <ProtectedRoute path="/conta/*" element={<Users />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
           <Footer />
         </UserStorage>
       </BrowserRouter>
-    </>
+    </div>
   );
 }
 

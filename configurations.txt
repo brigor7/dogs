@@ -104,7 +104,10 @@
 []PropTypes
 []Perdeu senha
 []Head
-[]Footer
+[✓]Footer
+  [✓] Create component Footer
+  [✓] Estilização Footer
+  [✓] Separando tamanho Header, Main e Footer
 []Bibliteca externa
 []Lazy e suspense
 []Ajustes finais
