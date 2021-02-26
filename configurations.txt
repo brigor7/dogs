@@ -77,6 +77,9 @@
   [✓] Realizando login após cadastro do novo usuario.
   
 []useFetch
+  [✓] Create component useFetch na pasta hooks
+  [✓] uso do component em Cadastrar usuario
+  [✓] uso de loading e componente <Error> no cadastro
 []Protected route
 []User Header
 []Mobile menu
