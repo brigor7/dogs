@@ -1,9 +1,9 @@
-import React, { useState, useRef } from 'react';
+import React from 'react';
 
 const useForm = (type) => {
-  const [value, setValue] = useState('');
-  const [error, setError] = useState(null);
-  const inputRef = useRef();
+  const [value, setValue] = React.useState('');
+  const [error, setError] = React.useState(null);
+  const inputRef = React.useRef();
 
   const types = {
     email: {
@@ -11,9 +11,9 @@ const useForm = (type) => {
       message: 'Preencha um e-mail válido',
     },
     password: {
-      regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/,
+      regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{6,}$/,
       message:
-        'A senha precisa ter: Mínimo de 8 caracteres e composta por letra e número.',
+        'A senha precisa ter: Mínimo de 6 caracteres e composta por letra e número.',
     },
   };
 
