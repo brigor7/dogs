@@ -11,10 +11,4 @@ const Button = ({ children, ...props }) => {
   );
 };
 
-const styled = {
-  button: {
-    background: '#fb1',
-  },
-};
-
 export default Button;
