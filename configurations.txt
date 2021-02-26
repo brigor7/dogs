@@ -81,6 +81,11 @@
   [✓] uso do component em Cadastrar usuario
   [✓] uso de loading e componente <Error> no cadastro
 []Protected route
+  [✓] Criar pasta e component User
+  [✓] Criar rota Conta em App.js
+  [✓] Criar componente ProtectedRoute para verificar login protegido 
+  [✓] Criar rota protegida, so se estiver logado ve
+  [✓] Setando login como false em UserContext. Acesso a rota protegida so acontece logado 
 []User Header
 []Mobile menu
 []Foto post
