@@ -104,7 +104,13 @@
     [✓] Estilização do UserHeader.header para alinhar titulo e botoes em cada extremo da página
     [✓] Uso de effect e useLocation para mudar o nome do titulo ao clicar no botão
 
-[]Mobile menu
+[✓]Mobile menu
+  [✓]Create component useMedia para saber o tamanho da tela com window.matchmedia
+  [✓]Create Button hamburguer para menu mobile
+    [✓] Criação de estado mobileMenuActive para verificar se foi ou nao clicado
+    [✓]Criação de itens de submenu para btn mobile
+    [✓] Criação de animação de btn mobile ativo ou desativado 
+    [✓] quando estado mobile = true mostrar btnMobile e esconder botoes UserMenuNav e mobile = false fazer o contrario
 []Foto post
 []Feed
 []Feed Modal 1
