@@ -6,10 +6,13 @@ import { ReactComponent as Estatistica } from '../../assets/estatisticas.svg';
 import { ReactComponent as AdicionarFotos } from '../../assets/adicionar.svg';
 import { ReactComponent as Sair } from '../../assets/sair.svg';
 import styles from './UserHeaderNav.module.css';
+import useMedia from '../../hooks/useMedia';
 
 const UserHeaderNav = () => {
-  const [mobile, setMobile] = React.useState(null);
   const { userLogout } = useContext(UserContext);
+
+  const mobile = useMedia('(max-width:40rem)');
+  console.log(mobile);
   return (
     <nav className={styles.nav}>
       <NavLink to="/conta" end activeClassName={styles.active}>
