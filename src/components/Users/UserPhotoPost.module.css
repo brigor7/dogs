@@ -1,0 +1,40 @@
+.photoPost {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.file {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  border: 1px solid #eee;
+  width: 100%;
+  font-size: 1rem;
+  padding: 0.8rem;
+  background: #eee;
+  outline: none;
+  transition: 0.2s;
+}
+
+.file:focus,
+.file:hover {
+  outline: none;
+  border-color: #fb1;
+  background: white;
+  box-shadow: 0 0 0 3px #fea;
+}
+
+.preview {
+  border-radius: 1rem;
+  background-size: cover;
+  background-position: center center;
+}
+
+/*Define o tamanho da area do preview da foto*/
+.preview::after {
+  content: '';
+  display: block;
+  height: 0;
+  padding-bottom: 100%;
+}

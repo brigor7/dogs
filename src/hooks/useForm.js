@@ -15,6 +15,10 @@ const useForm = (type) => {
       message:
         'A senha precisa ter: Mínimo de 6 caracteres e composta por letra e número.',
     },
+    number: {
+      regex: /^\d+$/,
+      message: 'Informe somente numero',
+    },
   };
 
   const validate = (value) => {

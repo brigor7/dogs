@@ -111,7 +111,27 @@
     [✓]Criação de itens de submenu para btn mobile
     [✓] Criação de animação de btn mobile ativo ou desativado 
     [✓] quando estado mobile = true mostrar btnMobile e esconder botoes UserMenuNav e mobile = false fazer o contrario
-[]Foto post
+[✓]Foto post
+  [✓]Criação de componente
+  [✓]Criação de rota em <User >
+  [✓]Criação de formulario com <Input />
+    [✓]Criação de state com useForm
+    [✓]Criação de validate para number
+  [✓]Criação de campo file
+    [✓]Estilização de campo file
+    [✓]Criação de state img e setImg com preview e conteudo
+      [✓]Criação de preview com URL.createObjectURL(target.files[0]) 
+  [✓]Utilização de grid com 2 colunas  
+    [✓] Coluna 1 - Form
+    [✓] Coluna 2 - Preview 
+  [✓]Estilizaçao do espaço de preview
+  [✓]Uso de component <Error error={error}/>
+  [✓]Uso de loading ao clicar no <Button/>
+  [✓]Uso de effect para encaminhar a rota local com userNavigate
+  [✓]Import useFetch para monitorar error, loading, data
+    [✓]Enviar dados com request
+    [✓]Criado constant PHOTO_POST em api.js para envio de dados a API
+    [✓]Envio de dados usando objeto FormatData() e formatData.append(key,value);
 []Feed
 []Feed Modal 1
 []Feed Modal 2
