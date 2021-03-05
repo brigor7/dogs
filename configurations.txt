@@ -132,14 +132,26 @@
     [✓]Enviar dados com request
     [✓]Criado constant PHOTO_POST em api.js para envio de dados a API
     [✓]Envio de dados usando objeto FormatData() e formatData.append(key,value);
-[]Feed
+[✓]Feed
+  [✓] Criação de componente Feed
+  [✓] Criação de componente FeedModal
+    [✓] Componente FeedPhotosItem
+    [✓] Utilização de UseFetch em useEffect
+    [✓] criação de endpoint PHOTOS_GET em api, passando page, total e user como argumentos queryString
+  [✓] Criação de componente FeedPhoto
+    [✓] Criação de module.css e estilização
+  [✓] Criação de componente FeedPhotoItem
+    [✓] Criação de module.css e estilização
+      [✓]Display grid com 2 itens por tela em mobile
+      [✓]Apresentar quantidade de acesso ao passar o mouse
+  [✓] Criação de componentes Loading
 []Feed Modal 1
 []Feed Modal 2
 []Comentario post
 []Comentario estilo
 []Foto Delete
 []Image skeleton
-[]loading
+[]Loading
 []scroll infinito
 []Foto página
 [] Perfil usuario
