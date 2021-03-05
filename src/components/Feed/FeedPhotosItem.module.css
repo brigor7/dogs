@@ -1,0 +1,49 @@
+.photo:nth-child(2) {
+  grid-column: 2/4;
+  grid-row: span 2;
+}
+
+/*Total de acessos*/
+.photo {
+  display: grid;
+  border-radius: 0.3rem;
+  overflow: hidden; /*Em grid o overflow serve para mostra o canto arredondo definido no border-radius */
+  cursor: pointer;
+}
+
+/*grid-area em span e img: os dois ficam no mesmo local*/
+.photo img {
+  grid-area: 1/1;
+}
+
+.visualizacao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.3);
+  color: white;
+  font-size: 1rem;
+  grid-area: 1/1;
+  display: none;
+  /*Display:none esconde as propriedades definidas e que são ativadas com o :hover*/
+}
+
+.visualizacao::before {
+  width: 16px;
+  height: 10px;
+  content: '';
+  display: inline-block;
+  margin-right: 0.25rem;
+  background: url('../../assets/visualizacao.svg') no-repeat;
+}
+
+.photo:hover .visualizacao {
+  display: flex;
+}
+
+@media (max-width: 40rem) {
+  .photo:nth-child(2) {
+    grid-column: initial;
+    grid-row: initial;
+  }
+}
