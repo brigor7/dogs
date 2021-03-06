@@ -134,7 +134,7 @@
     [✓]Envio de dados usando objeto FormatData() e formatData.append(key,value);
 [✓]Feed
   [✓] Criação de componente Feed
-  [✓] Criação de componente FeedModal
+  [✓] Criação de componente FeedPhoto
     [✓] Componente FeedPhotosItem
     [✓] Utilização de UseFetch em useEffect
     [✓] criação de endpoint PHOTOS_GET em api, passando page, total e user como argumentos queryString
@@ -144,10 +144,44 @@
     [✓] Criação de module.css e estilização
       [✓]Display grid com 2 itens por tela em mobile
       [✓]Apresentar quantidade de acesso ao passar o mouse
-  [✓] Criação de componentes Loading
-[]Feed Modal 1
-[]Feed Modal 2
-[]Comentario post
+  [✓✓] Criação de componentes Loading
+[✓]Feed Modal 1
+  [✓] Criação de componente FeedModal
+    [✓] Uso de useFetch para pesquisa de dados
+    [✓] Criação de GET_PHOTO em api para pesquisa de dados passando ID_User como argumento
+    [✓] Criação de state modal em <Feed>, passando state para componente FeedModal e mostrando-o se estado = true
+      [✓]State modal é alterado para true ao se clicar na photo (evento onClick) em <FeedPhotoItem>
+    [✓] Import <Erro>
+    [✓] Import <Loading>
+  [✓] Criação de css FeedModal.module.css
+  [✓] Criação de componente <PhotoContent>
+  [✓] Criação de css PhotoContent.module.css
+
+[✓]Feed Modal 2
+  [✓]Estilização de .modal em FeedModal.module.css
+    [✓] position:fixed - Fixar modal na tela
+    [✓] width: 100vh / height: 100vh: posicionar o conteudo na largura/altura da tela
+    [✓] top:0 / left:0: posicionar o conteudo no inicio do topo a esquerda da janela
+    [✓] background: rgba(0,0,0, 0.4) - Escurecer o conteudo para sobressair em relação ao fundo
+    [✓] display:flex: centralizar o conteudo na pagina posteriormente
+    [✓] z-index:1000 para ficar a frente de qualquer conteudo
+    [✓] padding: 2rem calc(4rem+15px) 2rem 4rem: Adicionar uma margem de 2rem no topo e na base e 4rem dos lados, sendo os 15px o espaço do scroll
+    [✓] Criação de media query com max-width: 40rem e padding: 2rem calc(2rem+15px) 2rem 2rem
+  [✓]Estilização de .photo em PhotoContent.module.css
+    [✓] margin: auto - Centralizar o conteudo da foto
+    [✓] height:36rem - altura máxima da foto
+    [✓] border-radius:.2rem - Arrendondar bordas
+    [✓] background:white - Fundo na cor branca
+    [✓] display: grid - Será usado grid para dispor os elementos na tela
+    [✓] grid-template-colums:36rem e 20rem - grid tera 2 colunas sendo a da esquerda maior
+    [✓] grid-template-rows: auto 1fr auto: 3 seções, sendo o topo com conteudo sobre o cão e a base os comentários, essas duas tem tamanho fixo (auto). O conteudo do meio é variavel (1fr) 
+    [✓] overflow:hidden - Esconder tudo que esta do lado de fora
+  [✓]Criação de animação ao clicar na foto ela espande.
+  [✓]Estilização do nome do autor, views 
+  [✓]Criação de opção para fechar a tela do modal, clicando no lado de fora, com handleOutsideClick em <FeedModal> verificando se event.target === event.currentTarget, então setModal(null)
+[]Comentario post 
+  [] Criação de componente PhotoComents
+  [] Criação de componente PhotoComents.module.css
 []Comentario estilo
 []Foto Delete
 []Image skeleton
