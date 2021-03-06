@@ -6,19 +6,18 @@
   <a href="#rocket-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#collision-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
    <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#zap-rodando-o-projeto">Rodando o Projeto</a>
   <a href="#scripts-execucao">Scripts</a>
   
 </p>
 
 <h2>
-<strong>Projeto</strong> AirCnc.
+<strong>Projeto</strong> Dogs.
 </h2>
 
 ## 🚀 Sobre a aplicação
 
 O Dogs é uma rede social para pets. Aqui o dono poderá fazer o cadastro do seu bichinho e ter um lugar para salvar fotografias com os melhores momentos do seu pet. Outras pessoas podem visualizar estes momentos especiais e registrar sua opinião através de comentários na página.
-Este é um projeto de finalização do curso de [React Completo](https://www.origamid.com/curso/react-completo/) da [Origamid](https://www.origamid.com)
+Este é um projeto de finalização do curso de [React Completo](https://www.origamid.com/curso/react-completo/) da [Origamid](https://www.origamid.com).
 
 
 ## :collision: Funcionalidades
@@ -44,7 +43,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 - [React](https://reactjs.org/)
 
 
-\* Para mais detalhes, veja o <kbd>[package.json](./package.json)</kbd> e os códigos do [backend](https://github.com/brigor7/airCnc/tree/master/backend), [frontend](https://github.com/brigor7/airCnc/tree/master/frontend) e [mobile](https://github.com/brigor7/airCnc/tree/master/mobile)
+\* Para mais detalhes, veja o <kbd>[package.json](./package.json)</kbd>.
 
 
 ## scripts: Execucao
