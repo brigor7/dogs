@@ -3,10 +3,10 @@
 </h1>
 
 <p align="center">
-  <a href="#rocket-sobre">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#rocket-sobre-a-aplicação">Sobre</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#collision-funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-   <a href="#rocket-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
-  <a href="#scripts-execucao">Scripts</a>
+   <a href="#arrow_forward-tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#page_facing_up-scripts">Scripts</a>
   
 </p>
 
@@ -23,17 +23,17 @@ Este é um projeto de finalização do curso de [React Completo](https://www.ori
 ## :collision: Funcionalidades
 
 - Login de usuário;
-- Inclusão de usuário
+- Inclusão de usuário;
 - Perdeu a senha;
-- Cadastro de informações de animal e foto
-- Visualização do cadastro de animal e foto
-- Exclusão de Fotos postada
-- Inclusão de comentário
-- Visualização de comentário
-- Visualização de author
+- Cadastro de informações de animal e foto;
+- Visualização do cadastro de animal e foto;
+- Exclusão de Fotos postada;
+- Inclusão de comentário;
+- Visualização de comentário;
+- Visualização de author.
 
 
-## :rocket: Tecnologias
+## :arrow_forward: Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
@@ -46,7 +46,7 @@ Esse projeto foi desenvolvido com as seguintes tecnologias:
 \* Para mais detalhes, veja o <kbd>[package.json](./package.json)</kbd>.
 
 
-## scripts: Execucao
+## :page_facing_up: Scripts
 
 Realize um git clone do projeto na sua máquina
 No diretorio da aplicação, execute o aplicativo no modo de desenvolvimento. 
