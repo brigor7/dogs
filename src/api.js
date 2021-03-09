@@ -1,4 +1,4 @@
-export const API_URL = 'https://dogsapi.origamid.dev/json';
+export const API_URL = 'https://dogsapi.origamid.dev/json'
 
 export const TOKEN_POST = (body) => {
   return {
@@ -10,8 +10,8 @@ export const TOKEN_POST = (body) => {
       },
       body: JSON.stringify(body),
     },
-  };
-};
+  }
+}
 
 export const USER_GET = (token) => {
   return {
@@ -22,8 +22,8 @@ export const USER_GET = (token) => {
         Authorization: 'Bearer ' + token,
       },
     },
-  };
-};
+  }
+}
 
 export const TOKEN_VALIDATE_POST = (token) => {
   return {
@@ -35,8 +35,8 @@ export const TOKEN_VALIDATE_POST = (token) => {
       },
       body: JSON.stringify(token),
     },
-  };
-};
+  }
+}
 
 export const USER_POST = (body) => {
   return {
@@ -48,8 +48,8 @@ export const USER_POST = (body) => {
       },
       body: JSON.stringify(body),
     },
-  };
-};
+  }
+}
 
 export const PHOTO_POST = (formatData, token) => {
   return {
@@ -61,8 +61,8 @@ export const PHOTO_POST = (formatData, token) => {
       },
       body: formatData,
     },
-  };
-};
+  }
+}
 
 export const PHOTOS_GET = ({ page, total, user }) => {
   return {
@@ -71,16 +71,33 @@ export const PHOTOS_GET = ({ page, total, user }) => {
       method: 'GET',
       cache: 'no-store',
     },
-  };
-};
+  }
+}
 
 export const PHOTO_GET = (id) => {
-  console.log('id= ' + id);
+  console.log('id= ' + id)
   return {
     url: `${API_URL}/api/photo/${id}`,
     options: {
       method: 'GET',
       cache: 'no-store',
     },
-  };
-};
+  }
+}
+
+export const COMMENT_POST = (id, body, token) => {
+  console.log(id, token, body)
+  console.log(`${API_URL}/api/comment/${id}`)
+  return {
+    url: `${API_URL}/api/comment/${id}`,
+
+    options: {
+      method: 'POST',
+    },
+    headers: {
+      'Content-Type': 'application/json',
+      Authorization: 'Bearer ' + token,
+    },
+    body: JSON.stringify(body),
+  }
+}
