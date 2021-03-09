@@ -101,3 +101,16 @@ export const COMMENT_POST = (id, body, token) => {
     body: JSON.stringify(body),
   }
 }
+
+export const PHOTO_DELETE = (id, token) => {
+  return {
+    url: `${API_URL}/api/photo/${id}`,
+
+    options: {
+      method: 'DELETE',
+    },
+    headers: {
+      Authorization: 'Bearer ' + token,
+    },
+  }
+}
