@@ -179,12 +179,32 @@
   [✓]Criação de animação ao clicar na foto ela espande.
   [✓]Estilização do nome do autor, views 
   [✓]Criação de opção para fechar a tela do modal, clicando no lado de fora, com handleOutsideClick em <FeedModal> verificando se event.target === event.currentTarget, então setModal(null)
-[]Comentario post 
-  [] Criação de componente PhotoComents
-  [] Criação de componente PhotoComents.module.css
-[]Comentario estilo
-[]Foto Delete
-[]Image skeleton
+[✓]Comentario post 
+  [✓] Criação de componente PhotoComents
+    [✓] Criação de componente PhotoComents.module.css
+    [✓] Recebimento de array de comentários, percorrendo este dados via map e passando autor e comentário para PhotoComentsForm
+  [✓] Criação de componente PhotoComentsForm
+    [✓] Criação de componente PhotoComentsForm.module.css
+    [✓]Criação de espaço para recebimento de lista de comentários
+    [✓]Criação de caixa de textarea e button para inclusão de novos comentários setComments([...comments, comment]), mantendo os comentários enteriores.
+
+
+
+[✓]Foto Delete
+  [✓]Criação de component Delete com Button para exclusão de foto do autor
+  [✓]Em UserContent, utilizar useContext para trazer propriedades do usuario, verificando se este é igual ao autor da foto
+    [✓]Se foto do autor apresentar botão de excluir foto, senão apresenta nome do autor
+  [✓]Criação de rota PHOTO_DELETE recebendo id como parametro e montando estrutura para execução de useFetch
+  [✓]Utilização de useFetch para executar a exclusão da foto por id 
+  
+[✓]Image skeleton
+  [✓]Criação de component Image  
+    [✓]Criação de componente de estilização Image.module.css
+      [✓]Uso de state skeleton para ativar/desativar efeito skeleton
+      [✓]Uso <img onLoad={handleLoad}> para apresentar imagem carregada
+      [✓]Estilização de classes: .img, .skeleton e .wrapper
+    [✓]Uso de <Imagem> em PhotoContent e FeedPhotoItem 
+
 []Loading
 []scroll infinito
 []Foto página

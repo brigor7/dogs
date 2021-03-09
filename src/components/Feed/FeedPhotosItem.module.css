@@ -12,7 +12,7 @@
 }
 
 /*grid-area em span e img: os dois ficam no mesmo local*/
-.photo img {
+.photo > div {
   grid-area: 1/1;
 }
 
