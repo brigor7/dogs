@@ -206,6 +206,10 @@
     [✓]Uso de <Imagem> em PhotoContent e FeedPhotoItem 
 
 []Loading
+  []Criação de component Loading  
+    []Estilização de componente através de Loading.module.css
+    []Copia de arquivo carregar.svg para Loading.js, animando o arquivo em 3 cenas
+    []Uso de component em FeedModal e FeedPhotos, antes de carregar as imagens.
 []scroll infinito
 []Foto página
 [] Perfil usuario
