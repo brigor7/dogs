@@ -1,23 +1,24 @@
-import React from 'react';
-import FeedPhotosItem from './FeedPhotosItem';
-import useFetch from '../../hooks/useFetch';
-import { PHOTOS_GET } from '../../api';
-import Error from '../../Helpers/Error';
-import Loading from '../../Helpers/Loading';
-import styles from './FeedPhotos.module.css';
+import React from 'react'
+import FeedPhotosItem from './FeedPhotosItem'
+import useFetch from '../../hooks/useFetch'
+import { PHOTOS_GET } from '../../api'
+import Error from '../../Helpers/Error'
+import Loading from '../../Helpers/Loading'
+import styles from './FeedPhotos.module.css'
 
-const FeedPhotos = ({ setModalPhoto }) => {
-  const { data, error, loading, request } = useFetch();
+const FeedPhotos = ({ user, setModalPhoto }) => {
+  const { data, error, loading, request } = useFetch()
+
   React.useEffect(() => {
     async function fetchPhotos() {
-      const { url, options } = PHOTOS_GET({ page: 1, total: 6, user: 0 });
-      const { json } = await request(url, options);
-      console.log(json);
+      const { url, options } = PHOTOS_GET({ page: 1, total: 9, user })
+      const { json } = await request(url, options)
     }
-    fetchPhotos();
-  }, [request]);
-  if (error) return <Error error={error} />;
-  if (loading) return <Loading />;
+    fetchPhotos()
+  }, [request, user])
+
+  if (error) return <Error error={error} />
+  if (loading) return <Loading />
   if (data)
     return (
       <ul className={`${styles.feed} animeLeft`}>
@@ -29,8 +30,8 @@ const FeedPhotos = ({ setModalPhoto }) => {
           />
         ))}
       </ul>
-    );
-  else return null;
-};
+    )
+  else return null
+}
 
-export default FeedPhotos;
+export default FeedPhotos
