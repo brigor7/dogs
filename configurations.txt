@@ -213,10 +213,24 @@
 
 [✓]Scroll infinito - Problema: Janela comporta numero limitado de imagens, necessário realizar carregamento de imagens postadas, através de paginação em <FeedPhotos> ou das fotos do autor<PhotoContent>
   [✓] Separando a visualização das fotos postadas pelo autor em <FeedPhotos> e todas as fotos postadas em<Feed>
-  []
+  [✓] Criação de scroll infinito
+    [✓] Refatoração para passagem de nro de page para API dinamicamente
+    [✓] Criado array para definir o total de registro, sendo que se o resultado da API trouxer menos do que o total (3 registros), isso significa que é a ultima página.
+      [✓] Criação de estado para definir quando é a ultima página, ou não 
+    [✓] Verifição do tamanho da janela com o tamanho do scroll para fazer nova requisiçao
+    [✓] Implementado espera de 1/2 segundo entre uma chamada de requisição e outra através do scroll, através de variavel wait
+    [✓] Criado 2 eventListeners: Um para escutar o movimento do scroll e do botão de rolagem do mouse (wheel) para scrolar tela 
 
-[]Foto página
-[] Perfil usuario
+
+[✓]Foto página - Criação de foto em página unica (view da foto)
+  [✓] Criação de rota "foto/:id" em App apontando para <Login>
+  [✓] Passagem de parametro single e estilização de CSS se single===true
+
+[✓] Perfil usuario - Página contendo todas as fotos do usuário
+  [✓] Criação de UserProfile recebendo user de parametro e passando user para <Feed>
+  [✓] Chamada de componente <Feed> passando user como argumento e recebendo fotos de user
+  [✓] Criação de rota 'perfil/:user em App.js
+
 [✓]Erro 404
   [✓] Criação de componentes
   [✓] Criação de rota em App
