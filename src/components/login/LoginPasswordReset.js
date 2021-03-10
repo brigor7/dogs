@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import Head from '../../Helpers/Head'
 
 const LoginPasswordReset = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   return (
     <section>
+      <Head title="Reset a senha" />
       <h1>Login Reset</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -27,7 +29,7 @@ const LoginPasswordReset = () => {
         <button>Entrar</button>
       </form>
     </section>
-  );
-};
+  )
+}
 
-export default LoginPasswordReset;
+export default LoginPasswordReset

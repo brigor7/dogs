@@ -235,13 +235,32 @@
   [✓] Criação de componentes
   [✓] Criação de rota em App
   [✓] Criação de rota em rotas internas. Ex: Login, User
-[]PropTypes
-[]Perdeu senha
-[]Head
+
+[✓]PropTypes - Usado para tipar os parametros recebidos
+  [✓]Import de PropTypes
+  [✓]Tipagem de user como string ou id
+
+[✓]Perdeu senha
+
+[✓]Head - Alterar o cabecalho do browser ao passar de uma página para outra
+  [✓] Criação de componente <Head> na pasta Helpers
+  [✓] Add de component <Head> com title e descrição nos components:
+    [✓]home - Página principal / Feed
+    [✓]Login - Pagina de login principal
+    [✓]LoginCreate - Página de novo cadastro
+    [✓]LoginPasswordLost - Pagina perdeu a senha
+    [✓]LoginPasswordReset - Pagina para informar email para senha
+    [✓]Photo - Pagina de foto
+    [✓]User - Minha conta
+    [✓]UserPhotoPost - Pagina de post de fotos
+    [✓]UserProfile - Pagina de fotos do usuario
+    [✓]UserStats - Pagina de estatistica do usuario
+
 [✓]Footer
   [✓] Create component Footer
   [✓] Estilização Footer
   [✓] Separando tamanho Header, Main e Footer
+  
 []Bibliteca externa
 []Lazy e suspense
 []Ajustes finais

@@ -1,20 +1,22 @@
-import React, { useContext } from 'react';
-import { Routes, Route, Navigate } from 'react-router-dom';
-import LoginForm from './LoginForm';
-import LoginCreate from './LoginCreate';
-import LoginPasswordLost from './LoginPasswordLost';
-import LoginPasswordReset from './LoginPasswordReset';
-import { UserContext } from '../../UserContext';
-import styles from './Login.module.css';
-import NotFound from '../../NotFound';
+import React, { useContext } from 'react'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import LoginForm from './LoginForm'
+import LoginCreate from './LoginCreate'
+import LoginPasswordLost from './LoginPasswordLost'
+import LoginPasswordReset from './LoginPasswordReset'
+import { UserContext } from '../../UserContext'
+import styles from './Login.module.css'
+import NotFound from '../../NotFound'
+import Head from '../../Helpers/Head'
 
 const Login = () => {
-  const { login } = useContext(UserContext);
+  const { login } = useContext(UserContext)
 
-  if (login === true) return <Navigate to="/conta" />;
+  if (login === true) return <Navigate to="/conta" />
   return (
     <section className={styles.login}>
       <div className={styles.form}>
+        <Head title="Login" description="Pagina de Login do site Dogs." />
         <Routes>
           <Route path="/" element={<LoginForm />} />
           <Route path="/criar" element={<LoginCreate />} />
@@ -24,7 +26,7 @@ const Login = () => {
         </Routes>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Login;
+export default Login

@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
+import Head from '../../Helpers/Head'
 
 const LoginPasswordLost = () => {
-  const [username, setUsername] = useState('');
-  const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('')
+  const [email, setEmail] = useState('')
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-  };
+    e.preventDefault()
+  }
 
   return (
     <section>
+      <Head title="Perdeu a senha?" />
       <h1>Login Perdeu</h1>
       <form onSubmit={handleSubmit}>
         <input
@@ -27,7 +29,7 @@ const LoginPasswordLost = () => {
         <button>Entrar</button>
       </form>
     </section>
-  );
-};
+  )
+}
 
-export default LoginPasswordLost;
+export default LoginPasswordLost
