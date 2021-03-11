@@ -5,7 +5,7 @@ import Input from '../forms/Input'
 import Button from '../forms/Button'
 import Error from '../../Helpers/Error'
 import Head from '../../Helpers/Head'
-import { PASSWORD_LOST } from '../../api'
+import { PASSWORD_RESET } from '../../api'
 
 const LoginPasswordLost = () => {
   const login = useForm()
@@ -16,7 +16,7 @@ const LoginPasswordLost = () => {
     e.preventDefault()
 
     if (login.validate()) {
-      const { url, options } = await PASSWORD_LOST({
+      const { url, options } = await PASSWORD_RESET({
         login: login.value,
         url: window.location.href.replace('perdeu', 'resetar'),
       })

@@ -240,7 +240,24 @@
   [✓]Import de PropTypes
   [✓]Tipagem de user como string ou id
 
-[✓]Perdeu senha
+[✓]Perdeu senha - Form - Criação de formulário para solicitação de reset de senha passando usuario ou email
+  [✓] Criação de component LoginPasswordLost
+  [✓] Criação de state login com useForm
+  [✓] Uso de component useFetch para enviar login para endpoint
+  [✓] Criação de PASSWORD_LOST em api.js
+  [✓] Tratamento de loading, error, data
+  [✓] Tratamento de data apresentando form ou mensagem de envio com sucesso
+
+[✓]Perdeu senha - Link email - Construção de form para alteração de senha através de link acessado por email
+  [✓] Criação de component LoginPasswordReset
+  [✓] Criação de state password com useForm
+  [✓] Resgate de queryParams com URLSearchParams(window.location.search)
+  [✓] Criação de states key e login com passagem de parametro
+  [✓] Uso de component useFetch para enviar login para endpoint
+  [✓] Criação de PASSWORD_RESET em api.js
+  [✓] Tratamento de loading, error, 
+  [✓] Encaminhamento a página de login após reset de senha
+  [✓] Importante: o token de reset é valido para 1 tentativa, se falhar, solicita-se novo reset
 
 [✓]Head - Alterar o cabecalho do browser ao passar de uma página para outra
   [✓] Criação de componente <Head> na pasta Helpers

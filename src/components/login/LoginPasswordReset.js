@@ -1,33 +1,62 @@
 import React, { useState } from 'react'
+import { PASSWORD_RESET } from '../../api'
 import Head from '../../Helpers/Head'
+import useForm from '../../hooks/useForm'
+import Input from '../forms/Input'
+import Button from '../forms/Button'
+import useFetch from '../../hooks/useFetch'
+import Error from '../../Helpers/Error'
+import { useNavigate } from 'react-router'
 
 const LoginPasswordReset = () => {
-  const [username, setUsername] = useState('')
-  const [email, setEmail] = useState('')
+  const [login, setLogin] = useState('')
+  const [key, setKey] = useState('')
+  const password = useForm('password')
+  const { error, loading, request } = useFetch()
+  const navigate = useNavigate()
 
-  const handleSubmit = (e) => {
+  React.useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const key = params.get('key')
+    const login = params.get('login')
+    key && setKey(key)
+    login && setLogin(login)
+  }, [])
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
+
+    if (password.validate()) {
+      const { url, options } = PASSWORD_RESET({
+        login,
+        key,
+        password: password.value,
+      })
+      const { response } = await request(url, options)
+      response.ok && navigate('/login')
+    }
   }
 
   return (
     <section>
-      <Head title="Reset a senha" />
-      <h1>Login Reset</h1>
+      <Head title="Alterar a senha" />
+      <h1 className="title">Alterar a senha</h1>
+
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          valuer={username}
-          onChange={({ target }) => setUsername(target.value)}
-          placeholder="Username"
+        <Input
+          name="password"
+          type="password"
+          label="Nova Senha"
+          {...password}
         />
-        <input
-          type="passoword"
-          valuer={email}
-          onChange={({ target }) => setEmail(target.value)}
-          placeholder="Senha"
-        />
-        <button>Entrar</button>
+
+        {loading ? (
+          <Button disabled>Alterando...</Button>
+        ) : (
+          <Button>Alterar</Button>
+        )}
       </form>
+      <Error error={error} />
     </section>
   )
 }
