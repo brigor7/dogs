@@ -1,24 +1,24 @@
-import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useContext } from 'react'
+import { Link } from 'react-router-dom'
 
-import Input from '../forms/Input';
-import Button from '../forms/Button';
-import useForm from '../../hooks/useForm';
-import { UserContext } from '../../UserContext';
-import Error from '../../Helpers/Error';
-import styles from './LoginForm.module.css';
-import stylesBtn from '../forms/button.module.css';
+import Input from '../forms/Input'
+import Button from '../forms/Button'
+import useForm from '../../hooks/useForm'
+import { UserContext } from '../../UserContext'
+import Error from '../../Helpers/Error'
+import styles from './LoginForm.module.css'
+import stylesBtn from '../forms/button.module.css'
 
 const LoginForm = () => {
-  const username = useForm();
-  const password = useForm();
+  const username = useForm()
+  const password = useForm()
 
-  const { userLogin, error, loading } = useContext(UserContext);
+  const { userLogin, error, loading } = useContext(UserContext)
 
   async function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault()
     if (username.validate() && password.validate()) {
-      userLogin(username.value, password.value);
+      userLogin(username.value, password.value)
     }
   }
 
@@ -34,7 +34,7 @@ const LoginForm = () => {
           <Button>Entrar</Button>
         )}
 
-        <Error error={error} />
+        <Error error={error && 'Dados incorretos.'} />
       </form>
       <Link className={styles.perdeu} to="/login/perdeu">
         Esqueci a senha
@@ -47,7 +47,7 @@ const LoginForm = () => {
         </Link>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default LoginForm;
+export default LoginForm
