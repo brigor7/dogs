@@ -278,7 +278,20 @@
   [✓] Estilização Footer
   [✓] Separando tamanho Header, Main e Footer
   
-[]Bibliteca externa
+[✓]Bibliteca externa - Carregamento de gráficos através de API externa victory
+  [✓] Import biblioteca de grafico victory yarn add victory
+  [✓] Criação de componente UserStats
+    [✓] Criação de conexao STATS_GET em api
+    [✓] Uso de useFetch para carregar {error, loading, data, request}
+    [✓] Tratamento de loading no html
+    [✓] Inclusão de <Error error={error} />
+    [✓] Apresentação de dados se data ===true
+  [✓] Criação de componente UserStatsGraphs
+    [✓]Criação de states para total de acesso e graph(dados para grafico)
+    [✓]Carregamento de dados vindo de API (useFetch)
+    [✓]Transformação de dados em array x:title / y:quant. acessos via map
+    [✓]Chamada de graficos pizza (VictoryPie) e Barras(VictoryBar)
+    [✓]Estilização com inclusão de grid 2 colunas e bordas em cada gráfico
 []Lazy e suspense
 []Ajustes finais
 []Build e hospedagem
