@@ -292,6 +292,10 @@
     [✓]Transformação de dados em array x:title / y:quant. acessos via map
     [✓]Chamada de graficos pizza (VictoryPie) e Barras(VictoryBar)
     [✓]Estilização com inclusão de grid 2 colunas e bordas em cada gráfico
-[]Lazy e suspense
-[]Ajustes finais
-[]Build e hospedagem
+[✓]Lazy e suspense
+  [✓] React.lazy - Utilizado na hora de importar o component UserStatsGraphs que usa o componente Victory. 
+     para carregar a biblioteca somente quando esta for solicitada pelo usuario e não automaticamente. A forma de importação é diferente, veja em UserStats.
+  [✓] React.Suspense -  Na construção do html o componente deverá vir envolto do component React.Suspense*/
+[✓]Ajustes finais
+  
+[✓]Build e hospedagem
